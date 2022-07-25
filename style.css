@@ -1,0 +1,630 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    background-color: #94618e;
+}
+
+.header{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/Images/college-building.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    opacity: 100%;
+    min-height: 100vh;
+    width: 100%;
+}
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 16px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #F4DECB;
+    text-decoration: none;
+}
+.nav-links ul li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #94618e;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+    cursor: pointer;
+}
+.text-box{
+    width: 90%;
+    color: #F4DECB;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1 {
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 15px;
+    color: #F4DECB;
+}
+@media(max-width: 900px){
+    .text-box h1{
+        font-size: 30px;
+    }
+    .text-box p{
+        font-size: 12px;
+    }
+    .nav-links {
+        font-size: 14px;
+    }
+}
+
+/* ---------------------------------------------- Campus ----------------------------------------------- */
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: #94618e;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campus h1 {
+    padding-bottom:10px;
+}
+
+.campus p {
+    color: #F4DECB;
+    font-size: 15px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.layer{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+background: rgba(142, 0, 0, 0.4);
+
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #F4DECB;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 40%;
+    opacity: 1;
+}
+
+@media(max-width: 900px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/* ---------------------------------------------- Facilities ---------------------------------------------- */
+
+.facilities p {
+    color: #F4DECB;
+    padding: 0;
+    font-size: 15px;
+}
+
+.facilities h1 {
+    padding-bottom: 20px;
+}
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.facilities-col{
+    flex-basis: 31%; 
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 25px;
+}
+
+/* ---------------------------------------------- Course ----------------------------------------------- */
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.course-col{
+    flex-basis: 23%;
+    background:#F4DECB;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin:10px 0;
+}
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
+}
+
+.btn {
+    height: 30px;
+    width: 120px;
+    border-radius: 5px;
+    border: none;
+    background-color: #c788bf;
+    color: black;   
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: #94618e;
+    color: #F4DECB;
+    transform: scale(1.1);
+}
+
+/* --------------------------------------------- Alumnis --------------------------------------------- */
+
+.alumni {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.alumni h1 {
+    padding-bottom: 20px;
+}
+
+.alumni p {
+    color: #F4DECB;
+    font-size: 15px;
+}
+
+.alumni-col{
+    flex-basis: 44%;
+    background:#F4DECB;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    padding: 25px;
+    display: flex;
+}
+
+.alumni-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
+}
+
+.alumni-col img{
+    height: 100px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.alumni-col p{
+    padding: 0;
+    color: #94618e;
+}
+.alumni-col h3{
+    margin-top: 16px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.alumni-col h6 {
+    font-size: 12px;
+    padding: 0%;
+}
+
+/* ------------------------------------------ Online (Harvard) -------------------------------------------- */
+.online{
+    height: 300px;
+    background-image: url(./Images/online.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+.online-btn {
+    position: relative;
+    left: 43%;
+    top: 100%;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: #F4DECB;
+}
+
+.online-btn:hover {
+    background-color: #c788bf;
+    transform: scale(1.1);
+}
+
+/* ---------------------------------------------- Footer ----------------------------------------------- */
+
+.footer{
+    height: 100%;
+    width: 100%;
+    background-color: #94618e;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    margin: 10px;
+    transition: 0.5s;
+}
+
+.address {
+    margin-top: 40px;
+}
+
+.social-media img {
+    height: 40px;
+    width: 40px;
+    margin: 20px;
+    transition: 0.5s;
+}
+
+.social-media img:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+@media(max-width: 900px){
+    .logo {
+        width: 80px;
+    }
+    .social-media img {
+        height: 20px;
+        width: 20px;
+        margin: 20px 10px;
+    }
+    .address {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+}
+
+/* --------------------------------------------- Courses Page --------------------------------------------- */
+
+.bg-color {
+    background-color: #F4DECB;
+}
+
+.sub-header {
+    height: 50vh;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    color: #F4DECB;
+}
+
+.sub-header h1{
+    margin-top: 30px;
+}
+
+.bg-courses {
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/Images/courses.png);
+}
+
+.course-row {
+    flex-direction: column;
+}
+
+.course-col2 {
+    display: flex;
+    background-color: #94618e;
+}
+
+.course-col2 p {
+    flex-basis: 33%;
+    color: #F4DECB;
+}
+
+table {
+    background-color: #94618e;
+    border-radius: 10px;
+}
+
+table th {
+    background-color: #c390bd;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 5px;
+}
+
+table td {
+    background-color: #f2d1ee;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 5px;
+}
+
+@media(max-width: 900px){
+    td {
+        font-size: 10px;
+    }
+    .course-col2 {
+        flex-direction: column;
+    }
+    table {
+        width: 100%;
+    }
+}
+
+/* -------------------------------------------- About Us Page --------------------------------------------- */
+
+.bg-about {
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/Images/burhani-about.jpeg);
+}
+
+.about-content {
+    margin-bottom: 30px;
+}
+
+.about-content h1 {
+    margin: 20px 40px 20px 40px;
+    text-align: center;
+}
+
+.about-content p {
+    color: #94618e;
+    font-size: 15px;
+    margin: 0px 40px 5px 40px;
+}
+
+.about-content h2 {
+    margin: 20px 0px 5px 20px;
+}
+
+.about-content ol li{
+    margin: 0px 40px 0px 60px;
+    list-style:decimal;
+    color: #94618e;
+    font-size: 15px;
+    padding: 5px;
+}
+
+hr {
+    margin: 40px 0px 40px 0px;
+    border: 1px solid #94618e;
+}
+
+/* ----------------------------------------------- Blog Page ---------------------------------------------- */
+
+.blog-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.blog-left{
+    flex-basis: 65%;
+}
+
+.blog-left h2{
+    margin: 0px 20px 0px 0px;
+    color: #222;
+    font-weight: 600;
+}
+
+.blog-left p{
+    margin: 20px 20px 0px 0px;
+    color:#94618e;
+    padding: 0;
+}
+
+.blog-right{
+    flex-basis: 35%;
+}
+
+.blog-right img{
+    width: 100%;
+}
+
+.comment-box input, .comment-box textarea{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    margin: 10px 0px;
+    padding: 10px 20px;
+    outline: none;
+}
+
+.btn-comment {
+    height: 40px;
+    width: 160px;
+    background-color: white;
+    transition: 0.5s;
+    border: 1px solid #94618e;
+}
+
+.btn-comment:hover {
+    background-color: #caa9c6;
+}
+
+.comment-box input:focus, .comment-box textarea:focus{
+    background-color: #ecd6e9;
+}
+
+
+@media(max-width:900px){
+    .blog-left p {
+        margin-bottom: 15px;
+    }
+    .blog-right {
+        width: 40%;
+        height: 60%;
+        margin: auto;
+    }
+}
+
+/* ------------------------------------------ Contact Us Page --------------------------------------------- */
+.contact-bg {
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/Images/campus1.jpeg);
+}
+
+.location{
+    width:80%;
+    margin:auto;
+    padding: 80px 0;
+}
+
+.location iframe{
+    width: 100%;
+}
+
+.contact-form{
+    width: 80%;
+    margin: auto;
+}
+
+.contact-details{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+
+.contact-details div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contact-details div img{
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    margin-right: 30px;
+}
+.contact-details div h5{
+    margin-bottom:5px ;
+    color:#94618e;
+    font-size: 25px;
+    font-weight: 500;
+}
+.contact-details div p{
+    padding: 0;
+    font-size: 14px;
+    color: black;
+}
+.contact-details input, .contact-details textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px ;
+    outline: none;
+    border: 1px solid #94618e;
+}
+
+.btn-contact {
+    height: 40px;
+    width: 140px;
+    background-color: white;
+    transition: 0.5s;
+    border: 1px solid #94618e;
+}
+
+.btn-contact:hover {
+    background-color: #c788bf;
+    color: white;
+}
+
+.contact-details input:focus, .contact-details textarea:focus {
+    background-color: #ecd6e9;
+}
