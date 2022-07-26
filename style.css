@@ -41,6 +41,13 @@ nav img{
     color: #F4DECB;
     text-decoration: none;
 }
+
+.nav-links ul li a p{
+    color: #F4DECB;
+    font-size: 16px;
+    padding: 0px;
+}
+
 .nav-links ul li::after{
     content: "";
     width: 0%;
@@ -50,10 +57,12 @@ nav img{
     margin: auto;
     transition: 0.5s;
 }
+
 .nav-links ul li:hover::after{
     width: 100%;
     cursor: pointer;
 }
+
 .text-box{
     width: 90%;
     color: #F4DECB;
@@ -63,14 +72,17 @@ nav img{
     transform: translate(-50%,-50%);
     text-align: center;
 }
+
 .text-box h1 {
     font-size: 62px;
 }
+
 .text-box p{
     margin: 10px 0 40px;
     font-size: 15px;
     color: #F4DECB;
 }
+
 @media(max-width: 900px){
     .text-box h1{
         font-size: 30px;
@@ -80,6 +92,20 @@ nav img{
     }
     .nav-links {
         font-size: 14px;
+    }
+
+    nav {
+        flex-direction: column;
+
+    }
+
+    .nav-links ul li a p{
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .nav-links ul li{
+        padding: 5px 0px 0px 0px;
     }
 }
 
@@ -303,6 +329,19 @@ h3{
     padding: 0%;
 }
 
+@media(max-width: 900px){
+    .alumni .row .alumni-col{
+        flex-direction: column;
+    }
+
+    .alumni-col img {
+        height: 80px;
+        width: 80px;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+}
+
 /* ------------------------------------------ Online (Harvard) -------------------------------------------- */
 .online{
     height: 300px;
@@ -378,6 +417,15 @@ h3{
         margin-top: 20px;
         font-size: 12px;
     }
+
+    .footer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .address {
+        text-align: center;
+    }
 }
 
 /* --------------------------------------------- Courses Page --------------------------------------------- */
@@ -444,6 +492,17 @@ table td {
     .course-col2 {
         flex-direction: column;
     }
+
+    .overflow-table th{
+        font-size: 14px;
+        padding: 2px;
+    }
+
+    .overflow-table td{
+        font-size: 12px;
+        padding: 2px;
+    }
+
     table {
         width: 100%;
     }
@@ -627,4 +686,15 @@ hr {
 
 .contact-details input:focus, .contact-details textarea:focus {
     background-color: #ecd6e9;
+}
+
+@media(max-width:900px){
+    .contact-details div img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .contact-details div span h5 {
+        font-size: 15px;
+    }
 }
