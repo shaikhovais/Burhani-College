@@ -1,3 +1,5 @@
+Click on this link to visit website =>> https://burhani-college.netlify.app/fy.app/
+
 Project created by Shaikh Ovais with the help of only HTML/CSS.
 This is a website of my college from where I did my graduation.
 
